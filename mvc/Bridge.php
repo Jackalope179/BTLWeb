@@ -1,3 +1,3 @@
 <?php
-    require_once "./mvc/App.php";
+    require_once "./mvc/core/App.php";
 ?>
