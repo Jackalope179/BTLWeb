@@ -1,0 +1,193 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "montserrat",sans-serif;
+    font-size: 14px;
+}
+
+.detail-container {
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.product-detail, .details-pro {
+    position: relative;
+    /* width: 100%; */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.product-image-detail{
+    position: relative;
+}
+
+.product-image-detail .product-image-btn {
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 15px;
+    z-index: 99;
+}
+
+.product-image-btn .btn-views{
+    background: #fff;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+    display: block;
+    height: 32px;
+    width: 32px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide img{
+    padding: 0 5px 10px 5px;
+}
+
+.swiper-container .swiper-wrapper .col-img{
+    padding: 0;
+}
+
+.details-pro h1{
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-right: 45px;
+}
+
+.details-pro .product-top span {
+    display: inline-block;
+    margin: 5px 0;
+    margin-right: 15px;
+}
+
+.details-pro .product-top span:last-child {
+    margin-right: 0;
+}
+
+.details-pro .price-box .special-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f97e6c;
+}
+
+.details-pro .price-box .old-price {
+    margin-left: 10px;
+}
+
+.details-pro .price-box .old-price .product-price-old {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #949494;
+}
+
+.details-pro .form-product .custom-btn-number .custom-btn-numbers input {
+    border: 3px solid #979494;
+    /* height: 38px; */
+    padding: 8px 0;
+    line-height: 18px;
+    width: 100px;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    color: #666;
+    border-radius: 0 !important;
+}
+
+.btn-mua {
+    display: flex;
+    margin: 10px 0;
+}
+
+.details-pro .form-product .btn-mua button {
+    background: #3f3fdb;
+    border: initial;
+    color: #fff;
+    height: 40px;
+    border-radius: initial;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 15px;
+    width: 49%;
+    margin-right: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 -2px 0 rgb(0 0 0 / 30%);
+    font-weight: bold;
+}
+
+.details-pro .form-product .btn-mua button.btn-buy-now {
+    outline: none;
+    background-color: #fe6b5e;
+    border-color: #fe6b5e;
+    color: #fff;
+    margin-right: 0;
+}
+
+.size-guide-box {
+    color: #3f3fdb;
+    font-weight: bold;
+}
+
+.size-guide-box svg {
+    color: #3f3fdb;
+    width: 17px;
+    height: 17px;
+    margin-right: 4px;
+    margin-top: -1px;
+}
+
+.product-summary {
+    font-size: 14px;
+}
+
+.product-tab {
+    margin: 30px 0;
+}
+
+.product-tab .tabs-title {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.product-tab .tabs-title li.current {
+    background: #fe6b5e;
+}
+.product-tab .tabs-title li:first-child {
+    border-top-left-radius: 0;
+}
+ul.tabs li.current {
+    color: #000;
+}
+ul.tabs li.current {
+    color: #000;
+}
+.product-tab .tabs-title li {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background: #323c42;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+ul.tabs li {
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+}
+ul.tabs li {
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+}
