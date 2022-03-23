@@ -1,7 +1,7 @@
 <?php
 class App{
     function __construct() {
-        echo "Web bán hàng";
+        require_once './mvc/views/pages/main.php';
     }
 }
 ?>
