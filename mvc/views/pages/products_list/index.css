@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 #bread_crumb {
     background-image: url(https://bizweb.dktcdn.net/100/423/630/files/bg-breadcrumb.jpg?v=1640052952057);
     background-size: cover;
