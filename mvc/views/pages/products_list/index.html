@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="public/fontawesome/css/fontawesome.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="public/css/main_page.css">
+        <script src="public/js/main_page.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+            integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css" />
+        <title>Shop</title>
+    </head>
+    <body>
+        <header>
+            <!-- Logo -->
+            <div id = "menu-logo">
+                <img src="public/images/smartphone.png" alt="logo">
+                <h3><span>dk</span><span>phone</span></h3>
+            </div>
+            <!-- Menu -->
+            <div id="menu-header">
+                <ul id="menu-list">
+                    <li id="one"><a href="#">Trang chủ</a> </li>
+                    <li id="two"><a href="#">Giới thiệu</a> </li>
+                    <li id="three" onmouseover="dropList()"><a href="#">Sản phẩm</a><i class="fa-solid fa-triangle"></i></li>
+                    <li id="four"><a href="">Tin tức</a></li>
+                    <hr/>
+                </ul>
+                <ul id="dropdown-list" onmouseleave="dropListOut()" class="dropdown-list">
+                    <li id ="first-child"> <a href="#">Iphone</a> </li>
+                    <li> <a href="#">Samsung</a> </li>
+                    <li> <a href="#">Oppo</a> </li>
+                    <li> <a href="#">Ipad</a> </li>
+                    <li id="last-child"> <a href="#">Huewei</a> </li>
+                </ul>
+            </div>
+            <!-- Login, Logout -->
+            <div id="menu-icon">
+                <ul>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+            <div id = "small-icon">
+                <img id = "sm-icon" src="public/images/menu.png" alt="" onclick= "addClass('responsive')">
+            </div>
+            
+            
+            
+        </header>
+
+        <div id="bread_crumb">
+            <div class="container">
+                <div class="nd-main-title-breadcrumb text-center">Phone Shop</div>
+                <ul id="bread_crumb_list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <a id="home_span" itemprop="item" href="#" title="Trang chủ">
+                            <span itemprop="name">Trang chủ</span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <strong id="products_span">
+                            <span itemprop="name">Sản phẩm</span>
+                            <meta itemprop="position" content="2">
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Sắp xếp
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" >
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_default" checked>
+                                        <label class="form-check-label" for="filter_default">
+                                            Mặc định
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_name_az">
+                                        <label class="form-check-label" for="filter_name_az">
+                                            Tên A-Z
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_name_za">
+                                        <label class="form-check-label" for="filter_name_za">
+                                            Tên Z-A
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_price_asc">
+                                        <label class="form-check-label" for="filter_price_asc">
+                                            Giá thấp đến cao
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_price_desc">
+                                        <label class="form-check-label" for="filter_price_desc">
+                                            Giá cao đến thấp
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Thương hiệu
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filter_samsung">
+                                        <label class="form-check-label" for="filter_samsung">
+                                            Samsung
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filter_apple">
+                                        <label class="form-check-label" for="filter_apple">
+                                            Apple
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filter_oppo">
+                                        <label class="form-check-label" for="filter_oppo">
+                                            OPPO
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                Giá
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_below_5m">
+                                        <label class="form-check-label" for="filter_less_5m">
+                                            Dưới 5.000.000đ
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_5m_10m">
+                                        <label class="form-check-label" for="filter_5m_10m">
+                                            5.000.000đ - 10.000.000đ 
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filer_10m_20m">
+                                        <label class="form-check-label" for="filter_name_za">
+                                            10.000.000đ - 20.000.000đ
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_above_20m">
+                                        <label class="form-check-label" for="filter_price_asc">
+                                            Trên 20.000.000đ
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <span class="badge rounded-pill bg-danger noti_badge">Mới</span>
+                                <svg id="test" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">SAMSUNG</p>
+                                    <p class="phone_name">Samsung Galaxy A52</p>
+                                    <p class="price">10.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">APPLE</p>
+                                    <p class="phone_name">iPhone 13 Pro Max</p>
+                                    <p class="price">50.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <span class="badge rounded-pill bg-danger noti_badge">-90%</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">OPPO</p>
+                                    <p class="phone_name">OPPO Reno6 Z</p>
+                                    <p class="price_discounted"><del>10.000.000 VND</del></p>
+                                    <p class="price"> 1.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">SAMSUNG</p>
+                                    <p class="phone_name">Samsung Galaxy A52</p>
+                                    <p class="price">10.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <span class="badge rounded-pill bg-danger noti_badge">Mới</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">APPLE</p>
+                                    <p class="phone_name">iPhone 13 Pro Max</p>
+                                    <p class="price">50.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <span class="badge rounded-pill bg-danger noti_badge">Mới</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">OPPO</p>
+                                    <p class="phone_name">OPPO Reno6 Z</p>
+                                    <p class="price">10.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <span class="badge rounded-pill bg-danger noti_badge">Hot</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">SAMSUNG</p>
+                                    <p class="phone_name">Samsung Galaxy A52</p>
+                                    <p class="price">10.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">APPLE</p>
+                                    <p class="phone_name">iPhone 13 Pro Max</p>
+                                    <p class="price">50.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-8 item_figure">
+                            <figure class="figure">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart heart_icon_not_chose" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill heart_icon_chose" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                                <img src="https://www.hcmut.edu.vn/images/hcmut/logoBK.png" 
+                                    class="figure-img img-fluid rounded item_img" 
+                                    alt="HCMUT">
+                                <figcaption class="figure-caption">
+                                    <p class="brand">OPPO</p>
+                                    <p class="phone_name">OPPO Reno6 Z</p>
+                                    <p class="price">10.000.000 VND</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="big-screen">
+            <div id="info">
+                <p>Đại học Bách Khoa TP. Hồ Chí Minh</p>
+                <p?>19001661</p>
+                <p>dinkout@hcmut.edu.vn</p>
+            </div>
+            <div id="contact">
+                <p>Theo dõi chúng tôi tại</p>
+                <div id="icon-contact">
+                    <div>
+                        <img src="public/images/facebook.png" alt="facebook">
+                    </div>
+                    <div>
+                        <img src="public/images/youtube.png" alt="youtube">
+                    </div>
+                    <div>
+                        <img src="public/images/instagram.png" alt="insta">
+                    </div>
+                </div>
+            </div>
+            <div id="regis">
+                <p>Đăng kí để nhận tin</p> 
+                <div id="register">
+                    <input type="text" class="form-control" placeholder="Nhận thông tin" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <button class ="btn btn-primary">Gửi</button>
+                </div>
+            </div>
+        </footer>
+        
+        <footer id ="footer-mobile">
+            <div id="info">
+                <p>Đại học Bách Khoa TP. Hồ Chí Minh</p>
+                <p>19001661</p>
+                <p>dinkout@hcmut.edu.vn</p>
+            </div>
+            <div id="contact">
+                <p>Theo dõi chúng tôi tại</p>
+                <div id="icon-contact">
+                    <div>
+                        <img src="public/images/facebook.png" alt="facebook">
+                    </div>
+                    <div>
+                        <img src="public/images/youtube.png" alt="youtube">
+                    </div>
+                    <div>
+                        <img src="public/images/instagram.png" alt="insta">
+                    </div>
+                </div>
+            </div>
+            <div id="regis">
+                <p>Đăng kí để nhận tin</p> 
+                <div id="register">
+                    <input type="text" class="form-control" placeholder="Nhận thông tin" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <button class ="btn btn-primary">Gửi</button>
+                </div>
+            </div> 
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

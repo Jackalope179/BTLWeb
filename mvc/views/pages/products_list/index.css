@@ -1,0 +1,137 @@
+#bread_crumb {
+    background-image: url(https://bizweb.dktcdn.net/100/423/630/files/bg-breadcrumb.jpg?v=1640052952057);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+}
+
+#bread_crumb::before {
+    content: "";
+    background-color: rgba(14, 14, 14, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#bread_crumb_list {
+    display: block;
+    color: #fff;
+    text-align: center;
+    background-color: transparent;
+    margin: 0;
+    position: relative;
+    padding-left: 0px;
+}
+
+#bread_crumb_list li {
+    display: inline;
+}
+
+#bread_crumb_list li::after {
+    content: "/";
+    color: white;
+}
+
+#bread_crumb_list li:last-child::after {
+    content: "";
+}
+
+#bread_crumb .nd-main-title-breadcrumb {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+#home_span {
+    text-decoration: initial;
+    color: white;
+}
+
+#home_span:hover {
+    color: blue;
+}
+
+#products_span {
+    color: whitesmoke;
+}
+
+.item_figure {
+    width: 33%;
+}
+
+.item_img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    background-color: lightgray;
+}
+
+.brand {
+    color: gray;
+    margin-left: 0%;
+}
+
+.phone_name {
+    color: black;
+    margin-left: 0%;
+    font-size: 120%
+}
+
+.price {
+    color: rgb(8, 6, 116);
+    font-weight: bold;
+    margin-left: 0%;
+}
+
+.price_discounted {
+    color: gray;
+    font-weight: initial;
+    margin-left: 0%;
+}
+
+.figure-caption p {
+    margin-bottom: 1%;
+}
+
+.figure {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 70%;
+}
+
+.noti_badge {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.heart_icon_not_chose, .heart_icon_chose {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    margin-right: 2%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.heart_icon_chose {
+    display: none;
+}
