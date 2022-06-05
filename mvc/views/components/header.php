@@ -21,13 +21,13 @@
         <!-- Menu -->
         <div id="menu-header">
             <ul id="menu-list">
-                <li id="one"><a href="#">Trang chủ</a> </li>
+                <li id="one"><a href="#">Trang chủ <i class="bi bi-alarm"></i></a> </li>
                 <li id="two"><a href="#">Giới thiệu</a> </li>
                 <li id="three" onmouseover="dropList()"><a href="#">Sản phẩm</a><i class="fa-solid fa-triangle"></i></li>
                 <li id="four"><a href="">Tin tức</a></li>
                 <hr/>
             </ul>
-            <ul id="dropdown-list" onmouseleave="dropListOut()" class="dropdown-list">
+            <ul id="dropdown-list" onmouseover="increase()" onmouseleave="dropListOut()" class="dropdown-list">
                 <li id ="first-child"> <a href="#">Iphone</a> </li>
                 <li> <a href="#">Samsung</a> </li>
                 <li> <a href="#">Oppo</a> </li>
@@ -38,9 +38,9 @@
         <!-- Login, Logout -->
         <div id="menu-icon">
             <ul>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+                <li> <img src="public/images/user.png" alt="sign-in"> </li>
+                <li> <img src="public/images/heart.png" alt="sign-in"> </li>
+                <li> <img src="public/images/shopping-cart.png" alt="sign-in"> </li>
             </ul>
         </div>
 

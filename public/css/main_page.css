@@ -10,6 +10,10 @@ body {
   height: 100% !important;
 }
 
+button {
+  cursor: pointer !important;
+}
+
 span:nth-child(1) {
   color: #ffffff;
   text-transform: uppercase;
@@ -30,6 +34,15 @@ header {
 #menu-logo img,
 #menu-logo h3 {
   display: inline-block;
+}
+
+#menu-icon img {
+  width: 24px;
+}
+
+#menu-icon ul li {
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 #menu-logo,
@@ -249,6 +262,13 @@ footer {
   height: 100%;
   display: none;
 }
+#sm-icon {
+  visibility: hidden;
+}
+#menu-icon {
+  position: absolute;
+  right: 0px;
+}
 
 @media only screen and (max-width: 576px) and (min-width: 375px) {
   header {
@@ -263,6 +283,10 @@ footer {
     width: 40%;
     display: flex;
     flex-direction: row;
+  }
+
+  #menu-icon ul {
+    margin-right: 1px;
   }
 
   #menu-icon,
@@ -288,23 +312,25 @@ footer {
     top: 9%;
   }
 
+  #menu-icon img {
+    width: 20px;
+  }
+
   #small-icon img {
     position: absolute;
     right: 10%;
   }
 
   #responsive {
-    position: absolute;
+    position: relative;
     display: none;
-    top: 25%;
-    right: 0%;
-    width: 50%;
+    width: 100%;
   }
 
   #sm-dropdown {
     position: absolute;
-    top: -48px;
-    right: 5%;
+    /* top: 0px;*/
+    right: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,7 +362,7 @@ footer {
   }
 
   #box {
-    height: 170px;
+    height: 215px;
   }
 
   #regis {
@@ -349,6 +375,9 @@ footer {
 }
 
 @media only screen and (max-width: 374px) {
+  #menu-icon img {
+    width: 20px;
+  }
   #footer-mobile {
     display: flex !important;
     flex-direction: column;
@@ -360,6 +389,7 @@ footer {
 
   #sm-icon {
     visibility: visible !important;
+    width: 27px;
   }
 
   #menu-icon {
@@ -393,6 +423,7 @@ footer {
   #menu-icon ul {
     position: absolute;
     right: 20%;
+    left: -32px;
     top: 9%;
   }
 
@@ -471,13 +502,6 @@ footer {
   }
 }
 
-#sm-icon {
-  visibility: hidden;
-}
-#menu-icon {
-  position: absolute;
-  right: 0px;
-}
 @media only screen and (max-width: 741px) and (min-width: 577px) {
   #menu-list li {
     margin: 0px 3px;
@@ -498,5 +522,34 @@ footer {
 
   #box {
     height: 255px !important;
+  }
+  #menu-icon img {
+    width: 17px;
+  }
+
+  #menu-list {
+    margin-top: 2px;
+  }
+
+  #menu-header li {
+    margin-left: 8px;
+  }
+
+  #menu-header a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 741px) and (max-width: 830px) {
+  #menu-header {
+    margin-right: 55px;
+  }
+
+  #menu-icon img {
+    width: 17px;
+  }
+
+  #menu-list {
+    margin-top: 2px;
   }
 }
